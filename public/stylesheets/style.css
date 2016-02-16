@@ -1,8 +1,27 @@
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background: #f5f4f4;
+    background: #f7f7f7;
 }
 
 footer {
     margin: 50px 0;
+}
+
+a {
+    color: #5fbcc9;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #27cee5;
+
+}
+
+.navbar-collapse {
+    background-color: white;
+}
+
+.navbar-fixed-top {
+    background-color: white;
+    border-bottom: 1px solid #5fbcc9;
 }
