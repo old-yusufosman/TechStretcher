@@ -1,0 +1,8 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background: #f5f4f4;
+}
+
+footer {
+    margin: 50px 0;
+}
