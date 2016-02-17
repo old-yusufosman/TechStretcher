@@ -7,8 +7,18 @@ footer {
     margin: 50px 0;
 }
 
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 a {
-    color: #5fbcc9;
+    font-family: 'Open Sans', sans-serif;
+    color: #2ac2bc;
+}
+
+.h1, h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
 }
 
 a:hover {
@@ -21,7 +31,27 @@ a:hover {
     background-color: white;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+    font-size: 11px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #27cee5;
+}
+
 .navbar-fixed-top {
     background-color: white;
     border-bottom: 1px solid #5fbcc9;
+}
+
+.logo {
+    display: inline;
+    float: left;
+    height: 17px;
+    overflow: hidden;
+    margin-top: 14px;
+    margin-right: 14px;
+    text-indent: -9999px;
+    width: 138px;
+    background: url(../images/ts_logo.png) no-repeat;
 }
