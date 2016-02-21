@@ -4,7 +4,7 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    margin: 55px 0; /* original - 50px */
 }
 
 p {
