@@ -1,1 +1,1 @@
-var app = angular.module('techStretcher', ['ui.router'])
+var app = angular.module('TechStretcher', ['ui.router'])
