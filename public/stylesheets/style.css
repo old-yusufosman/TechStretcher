@@ -1,11 +1,12 @@
 body {
-    font:  normal 13px 'Open Sans', sans-serif;
+    font:  normal 12px 'Poppins', sans-serif;  /* Previously: Open-Sans */
     color: #666;
+    background-color: #f3f4f4;
 }
 
 /* STRUCTURE */
 
-#pagewrap {
+#wrapper {
     padding: 0;
     width: 95%;
     max-width: 1100px;
@@ -16,20 +17,54 @@ body {
     width: 14%;
     padding: 1% 2%;
     float: left;
-    background: #f8f8f8;
+    background-color: #ffffff;
 }
+
+#leftbar h1 {
+    text-align: center;
+}
+
+#leftbar h2 {
+    font-variant: small-caps;
+    font-size: 16px;
+    margin: 0;
+}
+
+#leftbar ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #bfc1c1;
+}
+
+
+p#username {
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 14px;
+    color: #919292;
+}
+
+#hrline {
+    border-top: solid 1px #f2f2f2;
+}
+
 #middle {
     width: 51%;
     padding: 1% 2%;
     margin: 0 1% 5px 1%;
     float: left;
+    background-color: #ffffff;
 }
 
 #rightbar {
     width: 20.3%;
     padding: 1% 2%;
     float: right;
-    background: #f0efef;
+    background-color: #ffffff;
 
 }
 
@@ -38,7 +73,7 @@ body {
 }
 
 #leftbar, #middle, #rightbar, footer {
-    border: solid 1px #ccc;
+    border: solid 1px #aec4d1;
 }
 
 footer {
@@ -46,6 +81,41 @@ footer {
     padding: 0 12px;
 
 }
+
+.img-circle {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.stats {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.stat{
+    float:left;
+    width:50%;
+    font-size:12px;
+    ext-transform:capitalize;
+    text-decoration: none;
+}
+
+
+.stat strong {
+    display: block;
+    font-size: 24px;
+    color: #3fa0c0;
+}
+
+.stat span {
+    display: block;
+    font-size: 11px;
+    color: #919292;
+    margin-bottom: 20px;
+}
+
 
 /************************************************************************************
 MEDIA QUERIES
@@ -60,7 +130,7 @@ MEDIA QUERIES
     #middle {
         width: 95%;
         float: none;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     #rightbar {
