@@ -4,6 +4,24 @@ body {
     background-color: #f3f4f4;
 }
 
+.logo {
+    display: inline;
+    float: left;
+    height: 14px;
+    overflow: hidden;
+    margin-left: -63px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-indent: -9999px;
+    width: 125px;
+    background: url(../images/ts_logo.png) no-repeat;
+
+    position: relative;
+    left: 50%;
+
+}
+
+
 /* STRUCTURE */
 
 #wrapper {
@@ -37,11 +55,21 @@ body {
     color: #bfc1c1;
 }
 
+#leftbar a {
+    text-decoration: none;
+    color: #bfc1c1;
+}
+
+#leftbar a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
 
 p#username {
     text-align: center;
     padding: 0;
-    margin: 10px;
+    margin: 0;
     font-variant: small-caps;
     font-weight: bold;
     font-size: 14px;
@@ -106,7 +134,8 @@ footer {
 .stat strong {
     display: block;
     font-size: 24px;
-    color: #3fa0c0;
+    margin-bottom: -5px;
+    color: #2ac2bc;
 }
 
 .stat span {
