@@ -9,16 +9,12 @@ body {
     float: left;
     height: 14px;
     overflow: hidden;
-    margin-left: -63px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px -63px;
     text-indent: -9999px;
     width: 125px;
     background: url(../images/ts_logo.png) no-repeat;
-
     position: relative;
     left: 50%;
-
 }
 
 
@@ -40,6 +36,13 @@ body {
 
 #leftbar h1 {
     text-align: center;
+    font-weight: normal;
+    color: #2ac2bc;
+}
+
+#leftbar h1 .h1colour {
+    text-align: center;
+    color: #036965;
 }
 
 #leftbar h2 {
@@ -86,6 +89,7 @@ p#username {
     margin: 0 1% 5px 1%;
     float: left;
     background-color: #ffffff;
+    font: 14px tahoma, arial, sans-serif;
 }
 
 #rightbar {
