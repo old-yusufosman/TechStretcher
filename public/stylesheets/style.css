@@ -23,15 +23,16 @@ body {
     width: 95%;
     max-width: 1100px;
     margin: 20px auto;
-    display:flex;
-    justify-content:space-between;
+    margin: 0 auto;
 }
 
 #leftbar {
     width: 14%;
     padding: 1% 2%;
+    height: inherit;
     float: left;
     background-color: #ffffff;
+    display: inline-block;
 }
 
 #leftbar h1 {
@@ -99,6 +100,7 @@ p#username {
 #middle {
     width: 58%;
     float: left;
+    margin: 0 15px 0 15px;
 }
 
 #write_post_box {
@@ -127,7 +129,7 @@ p#username {
 
 .post {
     width: 100%;
-    border: solid 1px #aec4d1;
+    border: solid 1px #dcdcdc;
     padding: 10px;
     margin-bottom: 15px;
     background-color: white;
@@ -188,14 +190,8 @@ p#username {
     margin-bottom: 20px;
 }
 
-#leftbar, #rightbar, footer {
-    border: solid 1px #aec4d1;
-}
-
-footer {
-    clear: both;
-    padding: 0 12px;
-
+#leftbar, #rightbar{
+    border: solid 1px #dcdcdc;
 }
 
 .stats {
