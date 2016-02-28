@@ -38,9 +38,9 @@
         </ul>
     </section>
     <section id="middle">
-        <input type="text" id="write_post_box" placeholder="Write here...">
+        <input type="text" id="write_post_box" placeholder="Write here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write here...'">
 
-        <div class="post">
+        <div class="box post">
             <div class="post_header">
                 <img class="img_circle small" src="/images/yusuf.jpg">
                 <h3>Yusuf Osman</h3>
@@ -52,7 +52,7 @@
             <p>Read more...</p>
         </div>
 
-        <div class="post">
+        <div class="box post">
             <div class="post_header">
                 <img class="img_circle small" src="/images/yusuf.jpg">
                 <h3>Yusuf Osman</h3>
@@ -66,12 +66,29 @@
     </section>
 
     <section id="rightbar">
-        <h2>3rd Content Area</h2>
-        <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
-        </p>
-        <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+        <div class="box trending-posts">
+            <h1>trending posts...</h1>
+            <ol class="custom-counter">
+                <li>This is the first item</li>
+                <li>This is the second item</li>
+                <li>This is the third item</li>
+                <li>This is the fourth item</li>
+                <li>This is the fifth item</li>
+                <li>This is the sixth item</li>
+            </ol>
+        </div>
+
+        <div class="box trending-tags">
+            <h1>trending tags...</h1>
+            <ol class="custom-counter">
+                <li>This is the first item</li>
+                <li>This is the second item</li>
+                <li>This is the third item</li>
+                <li>This is the fourth item</li>
+                <li>This is the fifth item</li>
+                <li>This is the sixth item</li>
+            </ol>
+        </div>
     </section>
 </div>
 </body>
