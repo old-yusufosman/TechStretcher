@@ -18,13 +18,13 @@ body {
 }
 
 
-/* STRUCTURE */
-
 #wrapper {
     padding: 0;
     width: 95%;
     max-width: 1100px;
     margin: 20px auto;
+    display:flex;
+    justify-content:space-between;
 }
 
 #leftbar {
@@ -68,6 +68,19 @@ body {
     color: gray;
 }
 
+.img_circle {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.img_circle.small {
+    width: 40px;
+    height: 40px;
+    float: left;
+    display: inline;
+    margin-right: 12px;
+}
 
 p#username {
     text-align: center;
@@ -84,19 +97,89 @@ p#username {
 }
 
 #middle {
-    width: 51%;
-    padding: 1% 2%;
-    margin: 0 1% 5px 1%;
+    width: 58%;
     float: left;
-    background-color: #ffffff;
-    font: 14px tahoma, arial, sans-serif;
+}
+
+#write_post_box {
+    width: 100%;
+    height: 50px;
+    border: solid 1px #dcdcdc;
+    margin-bottom: 15px;
+    display: block;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+    transition: box-shadow 0.3s, border 0.3s;
+    font:  normal 18px 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding: 10px;
+}
+
+#write_post_box:focus,
+#write_post_box.focus {
+    outline: none;
+    border: solid 1px #8ea9a8;
+    box-shadow: 0 0 5px 1px #8ea9a8;
+}
+
+#post {
+    width: 100%;
+    border: solid 1px #aec4d1;
+    padding: 10px;
+    background-color: white;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#post h1 {
+    margin: 15px 0 0 0;
+    font:  normal 20px 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#post h2 {
+    font:  normal 14px 'Poppins', sans-serif;
+    margin: 0 0 10px 0;
+    color: #908f8f;
+    font-style: italic;
+}
+
+#post_header {
+    height: auto;
+    display:block;
+    overflow:auto;
+}
+
+
+#post_header h3 {
+    margin: 0;
+    font:  normal 12px 'Poppins', sans-serif;
+    color: #2ac2bc;
+}
+
+#post .date {
+    float: left;
+    margin: 0;
+    font-size: 10px;
+}
+
+.post_image {
+    max-width: 100%;
+    max-height:100%;
 }
 
 #rightbar {
     width: 20.3%;
     padding: 1% 2%;
-    float: right;
+    float: left;
     background-color: #ffffff;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 
 }
 
@@ -104,7 +187,7 @@ p#username {
     margin-bottom: 20px;
 }
 
-#leftbar, #middle, #rightbar, footer {
+#leftbar, #rightbar, footer {
     border: solid 1px #aec4d1;
 }
 
@@ -112,12 +195,6 @@ footer {
     clear: both;
     padding: 0 12px;
 
-}
-
-.img-circle {
-    border-radius: 50%;
-    max-width: 100%;
-    height: auto;
 }
 
 .stats {
@@ -155,6 +232,13 @@ MEDIA QUERIES
 *************************************************************************************/
 /* for 950px or less */
 @media screen and (max-width: 950px) {
+    #wrapper {
+        padding: 0;
+        width: 95%;
+        max-width: 1100px;
+        margin: 20px auto;
+        display: inline;
+    }
 
     #leftbar {
         display: none;
