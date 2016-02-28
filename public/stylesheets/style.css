@@ -125,43 +125,44 @@ p#username {
     box-shadow: 0 0 5px 1px #8ea9a8;
 }
 
-#post {
+.post {
     width: 100%;
     border: solid 1px #aec4d1;
     padding: 10px;
+    margin-bottom: 15px;
     background-color: white;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-#post h1 {
+.post h1 {
     margin: 15px 0 0 0;
     font:  normal 20px 'Poppins', sans-serif;
     font-weight: bold;
 }
 
-#post h2 {
+.post h2 {
     font:  normal 14px 'Poppins', sans-serif;
     margin: 0 0 10px 0;
     color: #908f8f;
     font-style: italic;
 }
 
-#post_header {
+.post_header {
     height: auto;
     display:block;
     overflow:auto;
 }
 
 
-#post_header h3 {
+.post_header h3 {
     margin: 0;
     font:  normal 12px 'Poppins', sans-serif;
     color: #2ac2bc;
 }
 
-#post .date {
+.post .date {
     float: left;
     margin: 0;
     font-size: 10px;
