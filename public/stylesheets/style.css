@@ -1,10 +1,10 @@
 body {
-    font:  normal 12px 'Poppins', sans-serif;  /* Previously: Open-Sans */
+    font:  normal 75% 'Poppins', sans-serif;  /* Previously: Open-Sans */
     color: #666;
     background-color: #f3f4f4;
 }
 
-.logo {
+/*.logo {
     display: inline;
     float: left;
     height: 14px;
@@ -15,8 +15,7 @@ body {
     background: url(../images/ts_logo.png) no-repeat;
     position: relative;
     left: 50%;
-}
-
+}*/
 
 #wrapper {
     padding: 0;
@@ -36,6 +35,7 @@ body {
 }
 
 #leftbar h1 {
+    font-size: 150%;
     text-align: center;
     font-weight: normal;
     color: #2ac2bc;
@@ -48,7 +48,7 @@ body {
 
 #leftbar h2 {
     font-variant: small-caps;
-    font-size: 16px;
+    font-size: 130%;
     margin: 0;
 }
 
@@ -67,6 +67,35 @@ body {
 #leftbar a:hover {
     text-decoration: none;
     color: gray;
+}
+
+.stats {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.stat{
+    float:left;
+    width:50%;
+    font-size:110%;
+    text-transform:capitalize;
+    text-decoration: none;
+}
+
+
+.stat strong {
+    display: block;
+    font-size: 180%;
+    margin-bottom: -5px;
+    color: #2ac2bc;
+}
+
+.stat span {
+    display: block;
+    font-size: 85%;
+    color: #919292;
+    margin-bottom: 20px;
 }
 
 .img_circle {
@@ -89,7 +118,7 @@ p#username {
     margin: 0;
     font-variant: small-caps;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 120%;
     color: #919292;
 }
 
@@ -114,7 +143,7 @@ p#username {
     border-radius: 0;
     transition: box-shadow 0.3s, border 0.3s;
     transition: ease-in-out, height .35s ease-in-out;
-    font:  normal 14px 'Poppins', sans-serif;
+    font:  normal 115% 'Poppins', sans-serif;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
@@ -143,7 +172,7 @@ p#username {
 .trending-posts .trending-tags h1 {
     color: #036965;
     font-variant: small-caps;
-    font-size: 16px;
+    font-size: 120%;
 }
 
 .custom-counter {
@@ -169,12 +198,12 @@ p#username {
 
 .post h1 {
     margin: 15px 0 0 0;
-    font-size:  20px;
+    font-size:  165%;
     font-weight: bold;
 }
 
 .post h2 {
-    font-size:  14px;
+    font-size:  115%;
     font-weight: normal;
     margin: 0 0 10px 0;
     color: #908f8f;
@@ -190,14 +219,14 @@ p#username {
 
 .post_header h3 {
     margin: 0;
-    font:  normal 12px 'Poppins', sans-serif;
+    font:  normal 100% 'Poppins', sans-serif;
     color: #2ac2bc;
 }
 
 .date {
     float: left;
     margin: 0;
-    font-size: 10px;
+    font-size: 80%;
 }
 
 .post_image {
@@ -218,47 +247,27 @@ p#username {
     margin-bottom: 20px;
 }
 
-.stats {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.stat{
-    float:left;
-    width:50%;
-    font-size:12px;
-    ext-transform:capitalize;
-    text-decoration: none;
-}
-
-
-.stat strong {
-    display: block;
-    font-size: 24px;
-    margin-bottom: -5px;
-    color: #2ac2bc;
-}
-
-.stat span {
-    display: block;
-    font-size: 11px;
-    color: #919292;
-    margin-bottom: 20px;
-}
-
 
 /************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
 /* for 950px or less */
 @media screen and (max-width: 1000px) {
+
+    body, h1, h2, h3{
+
+    }
+
     #wrapper {
         padding: 0;
         width: 95%;
         max-width: 1100px;
         margin: 20px auto;
         display: inline;
+    }
+
+    .box {
+        margin-bottom: 60px;
     }
 
     #leftbar {
@@ -281,12 +290,11 @@ MEDIA QUERIES
 /* for 480px or less */
 @media screen and (max-width: 600px) {
 
+
     header {
         height: auto;
     }
-    h1 {
-        font-size: 2em;
-    }
+
     #leftbar {
         display: none;
     }
