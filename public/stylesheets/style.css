@@ -1,13 +1,10 @@
 body {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: 100%;
-}
-
-body {
     font:  normal 75% 'Poppins', sans-serif;  /* Previously: Open+Sans */
     color: #666;
     background-color: #f3f4f4;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: 100%;
 }
 
 /*.logo {
@@ -144,7 +141,6 @@ p#username {
     border: solid 1px #dcdcdc;
     margin-bottom: 15px;
     display: block;
-    appearance: none;
     box-shadow: none;
     border-radius: 0;
     transition: box-shadow 0.3s, border 0.3s;

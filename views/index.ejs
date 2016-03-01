@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <title>TechStretcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="/javascripts/angularMain.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
     <link href="/stylesheets/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
-<body ng-app="TechStretcher">
+<body ng-app="TechStretcher" ng-controller="MainCtrl">
 <div id="wrapper">
     <section id="leftbar">
         <h1>tech<span class="h1colour">stretcher</span></h1>
         <img class="img_circle" src="/images/yusuf.jpg">
-        <p id = "username">yusuf osman</p>
+        <p id = "username">{{fullname}}</p>
 
         <div class="stats">
             <a class="stat" href="#">
@@ -41,27 +41,15 @@
     <section id="middle">
         <input type="text" id="write_post_box" placeholder="Write here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write here...'">
 
-        <div class="box post">
+        <div class="box post" ng-repeat="post in posts">
             <div class="post_header">
                 <img class="img_circle small" src="/images/yusuf.jpg">
-                <h3>Yusuf Osman</h3>
-                <p class="date">5 hours ago</p>
+                <h3>{{post.submitter}}</h3>
+                <p class="date">{{post.date}}</p>
             </div>
-            <h1>This is an Article Title...</h1>
-            <h2>Aren't subtitles great?</h2>
-            <img class="post_image" src="http://www.architectsjournal.co.uk/pictures/2000x2000fit/9/4/2/1369942_London_Skyline.jpg">
-            <p>Read more...</p>
-        </div>
-
-        <div class="box post">
-            <div class="post_header">
-                <img class="img_circle small" src="/images/yusuf.jpg">
-                <h3>Yusuf Osman</h3>
-                <p class="date">yesterday at 16:04</p>
-            </div>
-            <h1>There should be more articles like this...</h1>
-            <h2>Yes I absolutely agree</h2>
-            <img class="post_image" src="https://wallpaperscraft.com/image/thailand_sea_ocean_boat_rock_95477_1920x1080.jpg">
+            <h1>{{post.title}}</h1>
+            <h2>{{post.subtitle}}</h2>
+            <img class="post_image" src="{{post.image}}">
             <p>Read more...</p>
         </div>
     </section>
