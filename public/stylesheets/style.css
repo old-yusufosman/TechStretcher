@@ -175,14 +175,6 @@ p#username {
     padding: 10px;
 }
 
-#write_post_box:focus,
-#write_post_box.focus {
-    outline: none;
-    border: solid 1px #8ea9a8;
-    box-shadow: 0 0 5px 1px #8ea9a8;
-    height: 100px;
-}
-
 .box {
     width: 100%;
     border: solid 1px #dcdcdc;
