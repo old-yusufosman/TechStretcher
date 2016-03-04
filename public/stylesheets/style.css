@@ -165,10 +165,7 @@ p#username {
     border: solid 1px #dcdcdc;
     margin-bottom: 15px;
     display: block;
-    box-shadow: none;
-    border-radius: 0;
-    transition: box-shadow 0.3s, border 0.3s;
-    transition: ease-in-out, height .35s ease-in-out;
+    transition: box-shadow 0.3s, border 0.3s, ease-in-out, height .35s ease-in-out;
     font-size:  115%;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
