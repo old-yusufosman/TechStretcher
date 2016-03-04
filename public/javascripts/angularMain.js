@@ -16,12 +16,9 @@ app.controller('MainCtrl', [
 app.directive('writePostBox', function() {
     return {
         link: function(scope, element, attrs){
-            var expandWriteBox = function() {
+            element.click(function() {
                 element.css('height', '200px');
-            };
-            element.bind('click', expandWriteBox);
-            //element.css('height', '200px');
-            //element.height($window.innerHeight/3);
+            });
         }
     };
 });
