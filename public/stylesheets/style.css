@@ -186,6 +186,10 @@ p#username {
     margin-bottom: 10px;
 }
 
+#write-form-buttons{
+    text-align:right;
+}
+
 .btn {
     -webkit-border-radius: 28px;
     -moz-border-radius: 28px;

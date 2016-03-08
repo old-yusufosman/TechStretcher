@@ -20,7 +20,7 @@
     <section id="leftbar">
         <h1>tech<span class="h1colour">stretcher</span></h1>
         <img class="img_circle" ng-src="/images/yusuf.jpg">
-        <p id = "username">{{fullname}}</p>
+        <p id = "username">{{fullname.toLowerCase()}}</p>
 
         <div class="stats">
             <a class="stat" href="#">
@@ -55,8 +55,10 @@
                         <span class="header-name">{{fullname}}</span>
                     </div>
                     <textarea id="post-box-content" type="text" ng-model="title" placeholder="What would you like to share?" ng-blur="showContents = false"></textarea><br>
-                    <input class="btn" type="submit" value="Submit">
-                    <input class="btn" type="submit" value="Go Advanced">
+                    <div id="write-form-buttons">
+                        <input class="btn" type="submit" value="Submit">
+                        <input class="btn" type="submit" value="Go Advanced">
+                    </div>
                 </form>
             </div>
         </div>
