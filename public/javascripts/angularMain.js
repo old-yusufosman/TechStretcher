@@ -22,6 +22,10 @@ app.controller('MainController', [
             $scope.posts.push({submitter: 'Yusuf Osman', date: Date(), postcontent: $scope.postcontent, upvotes: 0});
             $scope.postcontent = "";
         };
+
+        $scope.incrementUpvotes = function(post) {
+            post.upvotes += 1;
+        };
     }]);
 
 app.filter('from', function(){
@@ -34,7 +38,7 @@ app.directive('writePostBox', function() {
     return {
         link: function(scope, element, attrs){
             element.click(function() {
-                //element.css('height', '200px');
+                //element.bootstrap('height', '200px');
                 angular.element(document.getElementById('write_post_box')).append("<p>TESTING!</p>");
             });
             element.bind('blur', function() {

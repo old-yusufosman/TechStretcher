@@ -7,8 +7,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="/stylsheets/bootstrap.min.css"></script>
     <script src="/javascripts/angularMain.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 <body ng-app="TechStretcher" ng-controller="MainController">
@@ -79,6 +81,8 @@
             <img ng-show="{{post.image}}" class="post_image" ng-src='{{post.image}}'>
             <p>{{post.postcontent}}</p>
             <p>Read more...</p>
+            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
+            <p>upvotes: {{post.upvotes}}</p>
         </div>
     </section>
 
