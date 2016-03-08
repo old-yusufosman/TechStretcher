@@ -11,7 +11,12 @@ app.config([
                 url: '/home',
                 templateUrl: '/home.html',
                 controller: 'MainController'
-            });
+            })
+            .state('posts', {
+                url: '/posts/{id}',
+                templateUrl: '/posts.html',
+                controller: 'PostsController'
+            });;
 
         $urlRouterProvider.otherwise('home');
     }]);
@@ -30,12 +35,6 @@ app.controller('MainController', [
         $scope.fullname = 'Yusuf Osman';
         $scope.showContents = false;
 
-        var d = new Date();
-        d.setDate(d.getDate() - 1);
-
-        var d2 = new Date();
-        d2.setDate(d2.getDate() - 3);
-
         $scope.posts = posts.posts;
 
         //$scope.posts = [
@@ -52,6 +51,14 @@ app.controller('MainController', [
         $scope.incrementUpvotes = function(post) {
             post.upvotes += 1;
         };
+    }]);
+
+app.controller('PostsController', [
+    '$scope',
+    '$stateParams',
+    'posts',
+    function($scope, $stateParams, posts){
+
     }]);
 
 app.filter('from', function(){
