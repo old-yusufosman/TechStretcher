@@ -1,6 +1,21 @@
 var app = angular.module('TechStretcher', ['ui.router']);
 app.constant('moment', moment)
 
+app.config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: '/home.html',
+                controller: 'MainController'
+            });
+
+        $urlRouterProvider.otherwise('home');
+    }]);
+
 app.factory('posts', [function(){
     var o = {
         posts: []
