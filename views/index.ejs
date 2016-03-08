@@ -54,16 +54,16 @@
                         <img class="img_circle small" ng-src="/images/yusuf.jpg">
                         <span class="header-name">{{fullname}}</span>
                     </div>
-                    <textarea id="post-box-content" type="text" ng-model="title" placeholder="What would you like to share?" ng-blur="showContents = false"></textarea><br>
+                    <textarea id="post-box-content" type="text" ng-model="postcontent" placeholder="What would you like to share?"></textarea><br>
                     <div id="write-form-buttons">
                         <input class="btn" type="submit" value="Submit">
-                        <input class="btn" type="submit" value="Go Advanced">
+                        <input class="btn" type="button" value="Go Advanced">
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="box post" ng-repeat="post in posts">
+        <div class="box post" ng-repeat="post in posts | orderBy: '-date'">
             <div class="box-user-header">
                 <img class="img_circle small" ng-src="/images/yusuf.jpg">
                 <div class="box-top-info">
@@ -71,9 +71,10 @@
                     <p class="date">{{post.date}}</p>
                 </div>
             </div>
-            <h1>{{post.title}}</h1>
-            <h2>{{post.subtitle}}</h2>
-            <img class="post_image" ng-src='{{post.image}}'>
+            <h1 ng-show="{{post.title}}">{{post.title}}</h1>
+            <h2 ng-show="{{post.subtitle}}">{{post.subtitle}}</h2>
+            <img ng-show="{{post.image}}" class="post_image" ng-src='{{post.image}}'>
+            <p>{{post.postcontent}}</p>
             <p>Read more...</p>
         </div>
     </section>
