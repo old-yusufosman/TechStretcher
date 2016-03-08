@@ -4,6 +4,8 @@
     <title>TechStretcher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="/javascripts/angularMain.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
@@ -68,7 +70,8 @@
                 <img class="img_circle small" ng-src="/images/yusuf.jpg">
                 <div class="box-top-info">
                     <span>{{post.submitter}}</span>
-                    <p class="date">{{post.date}}</p>
+                    <!--<p class="date">{{post.date}}</p>-->
+                    <span rel="tooltip" title={{post.date}}><p class="date">{{post.date | from}}</p></span>
                 </div>
             </div>
             <h1 ng-show="{{post.title}}">{{post.title}}</h1>
