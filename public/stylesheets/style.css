@@ -172,6 +172,10 @@ p#username {
     padding: 10px;
 }
 
+#hidden-post-box {
+    font-size: 90%;
+}
+
 
 #post-box-content {
     width: 100%;

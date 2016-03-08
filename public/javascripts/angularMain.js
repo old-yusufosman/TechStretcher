@@ -38,7 +38,6 @@ app.directive('writePostBox', function() {
     return {
         link: function(scope, element, attrs){
             element.click(function() {
-                //element.bootstrap('height', '200px');
                 angular.element(document.getElementById('write_post_box')).append("<p>TESTING!</p>");
             });
             element.bind('blur', function() {

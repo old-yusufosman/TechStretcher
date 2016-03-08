@@ -52,7 +52,7 @@
     <section id="middle">
         <div id="write-post-box" ng-click="showContents = true" ng-blur="showContents = false">
                 <p ng-hide="showContents">Write here...</p>
-            <div ng-show="showContents">
+            <div id="hidden-post-box" ng-show="showContents">
                 <form ng-submit="addPost()">
                     <div id="box-user-header">
                         <img class="img_circle small" ng-src="/images/yusuf.jpg">
