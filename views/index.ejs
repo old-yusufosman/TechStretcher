@@ -50,9 +50,9 @@
                 <p ng-hide="showContents">Write here...</p>
             <div ng-show="showContents">
                 <form ng-submit="addPost()">
-                    <div class="post_header">
+                    <div id="box-user-header">
                         <img class="img_circle small" ng-src="/images/yusuf.jpg">
-                        <h3>{{fullname}}</h3>
+                        <span class="header-name">{{fullname}}</span>
                     </div>
                     <textarea id="post-box-content" type="text" ng-model="title" placeholder="What would you like to share?" ng-blur="showContents = false"></textarea><br>
                     <input class="btn" type="submit" value="Submit">
@@ -62,10 +62,12 @@
         </div>
 
         <div class="box post" ng-repeat="post in posts">
-            <div class="post_header">
+            <div class="box-user-header">
                 <img class="img_circle small" ng-src="/images/yusuf.jpg">
-                <h3>{{post.submitter}}</h3>
-                <p class="date">{{post.date}}</p>
+                <div class="box-top-info">
+                    <span>{{post.submitter}}</span>
+                    <p class="date">{{post.date}}</p>
+                </div>
             </div>
             <h1>{{post.title}}</h1>
             <h2>{{post.subtitle}}</h2>

@@ -130,12 +130,11 @@ header h1 {
     height: auto;
 }
 
-.img_circle.small {
+.small {
+    float: left;
     width: 40px;
     height: 40px;
-    float: left;
-    display: inline;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 p#username {
@@ -175,13 +174,14 @@ p#username {
 
 #post-box-content {
     width: 100%;
+    color: #036965;
     margin-top: 10px;
     min-height: 100px;
     resize: none;
     font:  normal 100% 'Poppins', sans-serif;
     float: left;
     display: inline;
-    border: solid #2ac2bc 1px;
+    border: 0;
     outline:0;
     margin-bottom: 10px;
 }
@@ -257,11 +257,28 @@ p#username {
     font-style: italic;
 }
 
+
+#box-user-header, #box-user-header span {
+    display: inline-block;
+    font-size:  100%;
+    font-weight: normal;
+    color: #2ac2bc;
+    vertical-align: middle;
+    line-height: 42px;
+}
+
+.box-top-info {
+    font-size:  100%;
+    font-weight: normal;
+    color: #2ac2bc;
+    vertical-align: middle;
+}
+
+
 .post_header {
     height: auto;
     display:block;
     overflow:auto;
-    vertical-align: middle;
 }
 
 
@@ -270,11 +287,9 @@ p#username {
     font-size:  100%;
     font-weight: normal;
     color: #2ac2bc;
-    vertical-align: middle;
 }
 
 .date {
-    float: left;
     margin: 0;
     font-size: 80%;
     color: #a5a6ab;
