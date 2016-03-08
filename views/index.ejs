@@ -46,8 +46,19 @@
         </ul>
     </section>
     <section id="middle">
-        <div write-post-box id="write_post_box">
-            <p>Write here...</p>
+        <div id="write-post-box" ng-click="showContents = true" ng-blur="showContents = false">
+                <p ng-hide="showContents">Write here...</p>
+            <div ng-show="showContents">
+                <form ng-submit="addPost()">
+                    <div class="post_header">
+                        <img class="img_circle small" ng-src="/images/yusuf.jpg">
+                        <h3>{{fullname}}</h3>
+                    </div>
+                    <textarea id="post-box-content" type="text" ng-model="title" placeholder="What would you like to share?" ng-blur="showContents = false"></textarea><br>
+                    <input class="btn" type="submit" value="Submit">
+                    <input class="btn" type="submit" value="Go Advanced">
+                </form>
+            </div>
         </div>
 
         <div class="box post" ng-repeat="post in posts">
