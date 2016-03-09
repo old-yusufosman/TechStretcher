@@ -10,7 +10,7 @@ app.config([
             .state('home', {
                 url: '/home',
                 templateUrl: '/home.html',
-                controller: 'MainController'
+                controller: 'MainController',
             })
             .state('posts', {
                 url: '/posts/{id}',
@@ -21,10 +21,17 @@ app.config([
         $urlRouterProvider.otherwise('home');
     }]);
 
-app.factory('posts', [function(){
+app.factory('posts', ['$http', function($http){
     var o = {
         posts: []
     };
+
+    o.getAll = function () {
+        return $http.get('/posts').success(function (data) {
+            angular.copy(data, o.posts);
+        });
+    };
+
     return o;
 }]);
 
