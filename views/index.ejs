@@ -112,13 +112,12 @@
             </div>
         </div>
 
-        <div class="box post" ng-repeat="post in posts | orderBy: '-date'">
+        <div class="box post" ng-repeat="post in posts | orderBy: '-submissiondate'">
             <div class="box-user-header">
                 <img class="img_circle small" ng-src="/images/yusuf.jpg">
                 <div class="box-top-info">
-                    <span>{{post.submitter}}</span>
-                    <!--<p class="date">{{post.date}}</p>-->
-                    <span rel="tooltip" title={{post.date}}><p class="date">{{post.date | from}}</p></span>
+                    <span>{{post.author}}</span>
+                    <span rel="tooltip" title={{post.submissiondate}}><p class="date">{{post.submissiondate | from}}</p></span>
                 </div>
             </div>
             <h1 ng-show="{{post.title}}">{{post.title}}</h1>
@@ -128,7 +127,84 @@
             <p>Read more...</p>
             <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
             <p>upvotes: {{post.upvotes}}</p>
+            <span>
+              <a href="#/posts/{{$index}}">Comments</a>
+            </span>
         </div>
+    </section>
+</script>
+
+<script type="text/ng-template" id="/posts.html">
+    <section id="leftbar">
+        <h1>tech<span class="h1colour">stretcher</span></h1>
+        <img class="img_circle" ng-src="/images/yusuf.jpg">
+        <p id="username">{{fullname.toLowerCase()}}</p>
+
+        <div class="stats">
+            <a class="stat" href="#">
+                <strong>0</strong>
+                <span>Followers</span>
+            </a>
+            <a class="stat" href="#">
+                <strong>0</strong>
+                <span>Following</span>
+            </a>
+        </div>
+        <br>
+        <br>
+        <h2>your tags...</h2>
+        <ul>
+            <a href="#">
+                <li>Programming</li>
+            </a>
+            <a href="#">
+                <li>Design</li>
+            </a>
+            <a href="#">
+                <li>Computers</li>
+            </a>
+            <a href="#">
+                <li>Gadgets</li>
+            </a>
+            <a href="#">
+                <li>Phones</li>
+            </a>
+            <a href="#">
+                <li>Tablets</li>
+            </a>
+            <a href="#">
+                <li>Memes</li>
+            </a>
+        </ul>
+    </section>
+    <section id="middle">
+        <span>
+            {{post.postcontent}}
+        </span>
+
+        <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+            <span class="glyphicon glyphicon-thumbs-up"
+                  ng-click="incrementUpvotes(comment)">
+            </span>
+                {{comment.upvotes}} - by {{comment.author}}
+            <span style="font-size:20px; margin-left:10px;">
+                {{comment.body}}
+            </span>
+        </div>
+
+        <form ng-submit="addComment()"
+              style="margin-top:30px;">
+            <h3>Add a new comment</h3>
+
+            <div class="form-group">
+                <input type="text"
+                       class="form-control"
+                       placeholder="Comment"
+                       ng-model="body"/>
+            </div>
+            <input class="btn" type="submit" value="Post">
+        </form>
+
     </section>
 </script>
 

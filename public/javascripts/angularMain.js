@@ -44,7 +44,15 @@ app.controller('MainController', [
 
         $scope.addPost = function(){
             if(!$scope.postcontent || $scope.postcontent === '') { return; }
-            $scope.posts.push({submitter: 'Yusuf Osman', date: Date(), postcontent: $scope.postcontent, upvotes: 0});
+            $scope.posts.push({author: 'Yusuf Osman',
+                submissiondate: Date(),
+                postcontent: $scope.postcontent,
+                upvotes: 0,
+                comments: [
+                    {author: 'Joe', body: 'Das cool mayne', upvotes: 0},
+                    {author: 'Khaled', body: 'Bless up', upvotes: 2190}
+                ]
+            });
             $scope.postcontent = "";
         };
 
@@ -58,7 +66,17 @@ app.controller('PostsController', [
     '$stateParams',
     'posts',
     function($scope, $stateParams, posts){
+        $scope.post = posts.posts[$stateParams.id];
 
+        $scope.addComment = function(){
+            if($scope.body === '') { return; }
+            $scope.post.comments.push({
+                body: $scope.body,
+                author: 'user',
+                upvotes: 0
+            });
+            $scope.body = '';
+        };
     }]);
 
 app.filter('from', function(){
