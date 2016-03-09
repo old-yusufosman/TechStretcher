@@ -1,0 +1,71 @@
+<section id="leftbar">
+    <h1>tech<span class="h1colour">stretcher</span></h1>
+    <img class="img_circle" ng-src="/images/yusuf.jpg">
+    <p id="username">{{fullname.toLowerCase()}}</p>
+
+    <div class="stats">
+        <a class="stat" href="#">
+            <strong>0</strong>
+            <span>Followers</span>
+        </a>
+        <a class="stat" href="#">
+            <strong>0</strong>
+            <span>Following</span>
+        </a>
+    </div>
+    <br>
+    <br>
+    <h2>your tags...</h2>
+    <ul>
+        <a href="#">
+            <li>Programming</li>
+        </a>
+        <a href="#">
+            <li>Design</li>
+        </a>
+        <a href="#">
+            <li>Computers</li>
+        </a>
+        <a href="#">
+            <li>Gadgets</li>
+        </a>
+        <a href="#">
+            <li>Phones</li>
+        </a>
+        <a href="#">
+            <li>Tablets</li>
+        </a>
+        <a href="#">
+            <li>Memes</li>
+        </a>
+    </ul>
+</section>
+<section id="middle">
+        <span>
+            {{post.postcontent}}
+        </span>
+
+    <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+            <span class="glyphicon glyphicon-thumbs-up"
+                  ng-click="incrementUpvotes(comment)">
+            </span>
+        {{comment.upvotes}} - by {{comment.author}}
+            <span style="font-size:20px; margin-left:10px;">
+                {{comment.body}}
+            </span>
+    </div>
+
+    <form ng-submit="addComment()"
+          style="margin-top:30px;">
+        <h3>Add a new comment</h3>
+
+        <div class="form-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Comment"
+                   ng-model="body"/>
+        </div>
+        <input class="btn" type="submit" value="Post">
+    </form>
+
+</section>

@@ -9,7 +9,7 @@ app.config([
         $stateProvider
             .state('home', {
                 url: '/home',
-                templateUrl: '/home.html',
+                templateUrl: '/templates/home/index.html',
                 controller: 'MainController',
                 resolve: {
                     postPromise: ['posts', function(posts){
@@ -19,7 +19,7 @@ app.config([
             })
             .state('posts', {
                 url: '/posts/{id}',
-                templateUrl: '/posts.html',
+                templateUrl: '/templates/posts/index.html',
                 controller: 'PostsController',
                 resolve: {
                     post: ['$stateParams', 'posts', function($stateParams, posts) {
