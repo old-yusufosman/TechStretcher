@@ -11,12 +11,17 @@ app.config([
                 url: '/home',
                 templateUrl: '/home.html',
                 controller: 'MainController',
+                resolve: {
+                    postPromise: ['posts', function(posts){
+                        return posts.getAll();
+                    }]
+                }
             })
             .state('posts', {
                 url: '/posts/{id}',
                 templateUrl: '/posts.html',
                 controller: 'PostsController'
-            });;
+            });
 
         $urlRouterProvider.otherwise('home');
     }]);
@@ -24,6 +29,12 @@ app.config([
 app.factory('posts', ['$http', function($http){
     var o = {
         posts: []
+    };
+
+    o.create = function(post) {
+        return $http.post('/posts', post).success(function(data){
+            o.posts.push(data);
+        });
     };
 
     o.getAll = function () {
@@ -51,14 +62,11 @@ app.controller('MainController', [
 
         $scope.addPost = function(){
             if(!$scope.postcontent || $scope.postcontent === '') { return; }
-            $scope.posts.push({author: 'Yusuf Osman',
+            posts.create({
+                author: 'Yusuf Osman',
                 submissiondate: Date(),
                 postcontent: $scope.postcontent,
-                upvotes: 0,
-                comments: [
-                    {author: 'Joe', body: 'Das cool mayne', upvotes: 0},
-                    {author: 'Khaled', body: 'Bless up', upvotes: 2190}
-                ]
+                upvotes: 0
             });
             $scope.postcontent = "";
         };

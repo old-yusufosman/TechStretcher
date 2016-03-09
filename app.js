@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
-mongoose.connect('mongodb://heroku_h3qf978c:abc123@ds029224.mlab.com:29224/heroku_h3qf978c');
-
+mongoose.connect('mongodb://admin:abc123@ds029224.mlab.com:29224/heroku_h3qf978c');
+//mongoose.connect('mongodb://localhost/news');
 
 var routes = require('./routes/index');
 
