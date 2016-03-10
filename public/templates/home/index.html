@@ -41,7 +41,7 @@
     </ul>
 </section>
 <section id="middle">
-    <div id="write-post-box" ng-click="showContents = true" ng-blur="showContents = false">
+    <div id="write-post-box" ng-click="showContents = true" ng-blur="showContents = false" ng-show="isLoggedIn()">
         <p ng-hide="showContents">Write here...</p>
         <div id="hidden-post-box" ng-show="showContents">
             <form ng-submit="addPost()">

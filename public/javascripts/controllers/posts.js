@@ -2,8 +2,10 @@ angular.module('TechStretcher').controller('PostsCtrl', [
     '$scope',
     'posts',
     'post',
-    function($scope, posts, post){
+    'auth',
+    function($scope, posts, post, auth){
         $scope.post = post;
+        $scope.isLoggedIn = auth.isLoggedIn;
 
         $scope.addComment = function(){
             if($scope.body === '') { return; }

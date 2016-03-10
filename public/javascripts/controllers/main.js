@@ -1,10 +1,11 @@
 angular.module('TechStretcher').controller('MainCtrl', [
     '$scope',
     'posts',
-    function($scope, posts){
+    'auth',
+    function($scope, posts, auth){
         $scope.fullname = 'Yusuf Osman';
         $scope.showContents = false;
-
+        $scope.isLoggedIn = auth.isLoggedIn;
         $scope.posts = posts.posts;
 
         //$scope.posts = [

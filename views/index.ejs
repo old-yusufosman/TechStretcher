@@ -15,6 +15,14 @@
 </head>
 
 <body ng-app="TechStretcher" ng-controller="MainCtrl">
+<nav class="navbar navbar-default pull-right" ng-controller="NavCtrl">
+    <ul class="nav navbar-nav">
+        <li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li>
+        <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+        <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>
+        <li ng-hide="isLoggedIn()"><a href="/#/register">Register</a></li>
+    </ul>
+</nav>
 <header>
     <h1>tech<span class="h1colour">stretcher</span></h1>
 </header>
@@ -50,10 +58,71 @@
     </section>
 </div>
 
+<script type="text/ng-template" id="/register.html">
+    <div class="page-header">
+        <h1>techstretcher</h1>
+    </div>
+
+    <div ng-show="error" class="alert alert-danger row">
+        <span>{{ error.message }}</span>
+    </div>
+
+    <form ng-submit="register()"
+          style="margin-top:30px;">
+        <h3>Register</h3>
+
+        <div class="form-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Username"
+                   ng-model="user.username"/>
+        </div>
+        <div class="form-group">
+            <input type="password"
+                   class="form-control"
+                   placeholder="Password"
+                   ng-model="user.password"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</script>
+
+<script type="text/ng-template" id="/login.html">
+    <div class="page-header">
+        <h1>techstretcher</h1>
+    </div>
+
+    <div ng-show="error" class="alert alert-danger row">
+        <span>{{ error.message }}</span>
+    </div>
+
+    <form ng-submit="logIn()"
+          style="margin-top:30px;">
+        <h3>Log In</h3>
+
+        <div class="form-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Username"
+                   ng-model="user.username"/>
+        </div>
+        <div class="form-group">
+            <input type="password"
+                   class="form-control"
+                   placeholder="Password"
+                   ng-model="user.password"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+</script>
+
 <script src="/javascripts/filters/dateFromNow.js"></script>
 <script src="/javascripts/controllers/main.js"></script>
 <script src="/javascripts/controllers/posts.js"></script>
+<script src="/javascripts/controllers/authentication.js"></script>
+<script src="/javascripts/controllers/navigation.js"></script>
 <script src="/javascripts/services/posts.js"></script>
+<script src="/javascripts/services/authentication.js"></script>
 
 </body>
 </html>
