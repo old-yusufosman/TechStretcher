@@ -64,7 +64,7 @@
             <img class="img_circle small" ng-src="/images/yusuf.jpg">
             <div class="box-top-info">
                 <span>{{post.author}}</span>
-                <span rel="tooltip" title={{post.submissiondate}}><p class="date">{{post.submissiondate | from}}</p></span>
+                <span rel="tooltip" title={{post.submissiondate}}><p class="date">{{post.submissiondate | dateFromNow}}</p></span>
             </div>
         </div>
         <h1 ng-show="{{post.title}}">{{post.title}}</h1>
