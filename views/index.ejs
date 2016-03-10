@@ -14,15 +14,16 @@
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
-<body ng-app="TechStretcher" ng-controller="MainCtrl">
 <nav class="navbar navbar-default pull-right" ng-controller="NavCtrl">
     <ul class="nav navbar-nav">
-        <li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li>
+        <li ng-show="isLoggedIn()"><a>{{currentUser()}}</a></li>
         <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
         <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>
         <li ng-hide="isLoggedIn()"><a href="/#/register">Register</a></li>
     </ul>
 </nav>
+
+<body ng-app="TechStretcher">
 <header>
     <h1>tech<span class="h1colour">stretcher</span></h1>
 </header>

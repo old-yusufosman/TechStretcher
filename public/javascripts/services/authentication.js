@@ -43,7 +43,7 @@ angular.module('TechStretcher').factory('auth', ['$http', '$window', function($h
     };
 
     auth.logOut = function(){
-        $window.localStorage.removeItem('flapper-news-token');
+        $window.localStorage.removeItem('techstretcher-token');
     };
 
     return auth;
