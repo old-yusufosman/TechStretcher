@@ -5,8 +5,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
+var passport = require('passport');
 require('./models/Posts');
 require('./models/Comments');
+require('./models/User');
+require('./config/passport');
 mongoose.connect('mongodb://admin:abc123@ds029224.mlab.com:29224/heroku_h3qf978c');
 //mongoose.connect('mongodb://localhost/news');
 
@@ -25,6 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
 app.use('/', routes);
 
 // catch 404 and forward to error handler
