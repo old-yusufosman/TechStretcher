@@ -1,4 +1,4 @@
-angular.module('TechStretcher', ['ui.router'])
+angular.module('TechStretcher', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
 
 .config([
     '$stateProvider',
