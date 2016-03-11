@@ -66,6 +66,10 @@ header h1 {
     color: #2ac2bc;
 }
 
+#leftbar .login-control {
+    text-align: center;
+}
+
 .h1colour {
     font-weight: normal;
     text-align: center;

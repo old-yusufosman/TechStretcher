@@ -14,21 +14,61 @@
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-default pull-right" ng-controller="NavCtrl">
-    <ul class="nav navbar-nav">
-        <li ng-show="isLoggedIn()"><a>{{currentUser()}}</a></li>
-        <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
-        <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>
-        <li ng-hide="isLoggedIn()"><a href="/#/register">Register</a></li>
-    </ul>
-</nav>
-
-<body ng-app="TechStretcher">
+<body ng-app="TechStretcher" ng-controller="MainCtrl">
 <header>
     <h1>tech<span class="h1colour">stretcher</span></h1>
 </header>
 
 <div id="wrapper">
+    <section id="leftbar">
+        <h1>tech<span class="h1colour">stretcher</span></h1>
+        <div class="leftbar login-control" ng-hide="isLoggedIn()">
+            <img class="img_circle" ng-hide="isLoggedIn()" ng-src="/images/generic-prof-pic.png">
+            <a href="/#/login">Log in</a> or <a href="/#/register">Register</a>
+        </div>
+        <div ng-show="isLoggedIn()">
+            <img class="img_circle" ng-src="/images/yusuf.jpg">
+            <p id="username">{{currentUser().toLowerCase()}}</p>
+            <a href="" ng-click="logOut()">Log Out</a>
+
+            <div class="stats">
+                <a class="stat" href="#">
+                    <strong>0</strong>
+                    <span>Followers</span>
+                </a>
+                <a class="stat" href="#">
+                    <strong>0</strong>
+                    <span>Following</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h2 ng-show="isLoggedIn()">your tags...</h2>
+        <ul>
+            <a href="#">
+                <li>Programming</li>
+            </a>
+            <a href="#">
+                <li>Design</li>
+            </a>
+            <a href="#">
+                <li>Computers</li>
+            </a>
+            <a href="#">
+                <li>Gadgets</li>
+            </a>
+            <a href="#">
+                <li>Phones</li>
+            </a>
+            <a href="#">
+                <li>Tablets</li>
+            </a>
+            <a href="#">
+                <li>Memes</li>
+            </a>
+        </ul>
+    </section>
 
     <ui-view></ui-view>
 
