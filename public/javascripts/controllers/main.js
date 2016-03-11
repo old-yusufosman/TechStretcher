@@ -19,8 +19,8 @@ angular.module('TechStretcher').controller('MainCtrl', [
 
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: 'myModalContent.html',
-                controller: 'ModalInstanceCtrl',
+                templateUrl: '/login.html',
+                controller: 'AuthCtrl',
                 size: size,
                 resolve: {
                     items: function () {

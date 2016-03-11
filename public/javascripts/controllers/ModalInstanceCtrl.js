@@ -1,4 +1,4 @@
-angular.module('TechStretcher').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+angular.module('TechStretcher').controller('ModalInstanceCtrl2', function ($scope, $uibModalInstance, items) {
 
     $scope.items = items;
     $scope.selected = {
@@ -6,7 +6,6 @@ angular.module('TechStretcher').controller('ModalInstanceCtrl', function ($scope
     };
 
     $scope.ok = function () {
-        window.alert('hello!')
         $uibModalInstance.close($scope.selected.item);
     };
 

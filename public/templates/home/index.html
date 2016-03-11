@@ -5,7 +5,7 @@
             <form ng-submit="addPost()">
                 <div id="box-user-header">
                     <img class="img_circle small" ng-src="/images/yusuf.jpg">
-                    <span class="header-name">{{fullname}}</span>
+                    <span class="header-name">{{currentUser()}}</span>
                 </div>
                         <textarea id="post-box-content" type="text" ng-model="postcontent"
                                   placeholder="What would you like to share?"></textarea><br>

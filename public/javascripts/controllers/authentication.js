@@ -1,8 +1,9 @@
 angular.module('TechStretcher').controller('AuthCtrl', [
     '$scope',
     '$state',
+    '$uibModalInstance',
     'auth',
-    function($scope, $state, auth){
+    function($scope, $state, $uibModalInstance, auth){
         $scope.user = {};
 
         $scope.register = function(){
@@ -18,6 +19,7 @@ angular.module('TechStretcher').controller('AuthCtrl', [
                 $scope.error = error;
             }).then(function(){
                 $state.go('home');
+                $uibModalInstance.close();
             });
         };
     }]);

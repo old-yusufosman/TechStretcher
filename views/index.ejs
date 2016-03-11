@@ -10,9 +10,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
-    <!--<link href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="/javascripts/angularMain.js"></script>
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
@@ -162,31 +161,12 @@
     </form>
 </script>
 
-<script type="text/ng-template" id="myModalContent.html">
-    <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
-    </div>
-    <div class="modal-body">
-        <ul>
-            <li ng-repeat="item in items">
-                <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
-            </li>
-        </ul>
-        Selected: <b>{{ selected.item }}</b>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-    </div>
-</script>
 
 <script src="/javascripts/filters/dateFromNow.js"></script>
 <script src="/javascripts/controllers/main.js"></script>
 <script src="/javascripts/controllers/posts.js"></script>
 <script src="/javascripts/controllers/authentication.js"></script>
 <script src="/javascripts/controllers/navigation.js"></script>
-<script src="/javascripts/controllers/ModalInstanceCtrl.js"></script>
-<script src="/javascripts/directives/login.js"></script>
 <script src="/javascripts/services/posts.js"></script>
 <script src="/javascripts/services/authentication.js"></script>
 
