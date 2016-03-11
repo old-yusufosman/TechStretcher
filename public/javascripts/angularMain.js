@@ -28,7 +28,7 @@ angular.module('TechStretcher', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
             })
             .state('login', {
                 url: '/login',
-                templateUrl: '/login.html',
+                templateUrl: '/templates/login/index.html',
                 controller: 'AuthCtrl',
                 onEnter: ['$state', 'auth', function($state, auth){
                     if(auth.isLoggedIn()){
@@ -38,8 +38,8 @@ angular.module('TechStretcher', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
             })
             .state('register', {
                 url: '/register',
-                templateUrl: '/register.html',
-                controller: 'AuthCtrl',
+                templateUrl: '/templates/register/index.html',
+                controller: 'RegisterCtrl',
                 onEnter: ['$state', 'auth', function($state, auth){
                     if(auth.isLoggedIn()){
                         $state.go('home');

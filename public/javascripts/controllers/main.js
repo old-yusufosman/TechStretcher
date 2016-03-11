@@ -19,7 +19,7 @@ angular.module('TechStretcher').controller('MainCtrl', [
 
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: '/login.html',
+                templateUrl: '/templates/login/index.html',
                 controller: 'AuthCtrl',
                 size: size,
                 resolve: {
