@@ -22,4 +22,8 @@ angular.module('TechStretcher').controller('AuthCtrl', [
                 $uibModalInstance.close();
             });
         };
+
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
     }]);
