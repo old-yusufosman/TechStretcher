@@ -8,21 +8,25 @@
     </div>
 
     <form ng-submit="logIn()"
-          style="margin-top:30px;">
+          style="margin-top:30px;" autocomplete="off">
         <h3>Log In</h3>
+        <br>
 
-        <div class="form-group">
-            <input type="text"
-                   class="form-control"
-                   placeholder="Username"
-                   ng-model="user.username"/>
+        <div class="group">
+            <input ng-model="user.username" type="text" value="" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>username</label>
         </div>
-        <div class="form-group">
-            <input type="password"
-                   class="form-control"
-                   placeholder="Password"
-                   ng-model="user.password"/>
+
+        <div class="group">
+            <input ng-model="user.password" type="password" value="" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>password</label>
         </div>
+
+
         <button type="submit" class="btn btn-primary">Log In</button>
     </form>
 </div>
