@@ -91,6 +91,8 @@ router.post('/register', function(req, res, next){
 
     user.username = req.body.username;
 
+    user.fullName = req.body.fullName;
+
     user.setPassword(req.body.password)
 
     user.save(function (err){
