@@ -11,6 +11,7 @@ angular.module('TechStretcher').controller('AuthCtrl', [
                 $scope.error = error;
             }).then(function(){
                 $state.go('home');
+                $uibModalInstance.close();
             });
         };
 

@@ -492,8 +492,8 @@ and (max-width: 667px)
 
 /* Small Window */
 @media screen
-    and (max-width: 1000px)
-    and (min-device-width: 1000px){
+and (max-width: 1000px)
+and (min-device-width: 1000px){
 
     header {
         height: 40px;

@@ -15,11 +15,21 @@ angular.module('TechStretcher').controller('MainCtrl', [
 
         $scope.animationsEnabled = true;
 
-        $scope.open = function (size) {
+        $scope.login = function (size) {
 
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: '/templates/login/index.html',
+                controller: 'AuthCtrl',
+                size: size
+            });
+        };
+
+        $scope.register = function (size) {
+
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: '/templates/register/index.html',
                 controller: 'AuthCtrl',
                 size: size
             });
