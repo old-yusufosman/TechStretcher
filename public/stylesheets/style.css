@@ -43,15 +43,24 @@ header {
     z-index: 10;
 }
 
-.align-left {
+.header-align-left {
     float: left;
     margin: 5px;
 }
-.align-right {
+.header-align-right {
     float: right;
     margin: 5px 0 0 0;
 }
 
+.dropdown-menu li a{
+    font-size: 120%;
+    text-decoration: none;
+    color: #bfc1c1;
+}
+
+.dropdown-menu li a:hover{
+    color: #036965;
+}
 
 svg {
     fill: #2ac2bc;
@@ -63,6 +72,13 @@ header h1 {
     color: #2ac2bc;
     margin: 0;
     font-weight: normal;
+}
+
+.header-username {
+    font-size: 120%;
+    margin-right: 10px;
+    text-transform: lowercase;
+    font-variant: small-caps;
 }
 
 .leftbar {
@@ -112,7 +128,7 @@ header h1 {
 
 
 .leftbar a:hover {
-    color: gray;
+    color: #808080;
 }
 
 .stats {
@@ -461,6 +477,7 @@ and (max-width: 667px)
 
     header {
         display: inherit;
+        padding-bottom: 10px;
     }
 
     .align-left {

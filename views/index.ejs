@@ -19,17 +19,24 @@
 
 <body ng-app="TechStretcher" ng-controller="MainCtrl">
 <header>
-    <h1 class="align-left">tech<span class="h1colour">stretcher</span></h1>
-    <div class="btn-group align-right" uib-dropdown>
+    <h1 class="header-align-left">tech<span class="h1colour">stretcher</span></h1>
+    <div class="btn-group header-align-right" uib-dropdown>
         <svg uib-dropdown-toggle height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
         <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
             <li role="menuitem"><a href="#">Action</a></li>
             <li role="menuitem"><a href="#">Another action</a></li>
             <li class="divider"></li>
-            <li role="menuitem"><a href="#">Separated link</a></li>
+            <li ng-hide="isLoggedIn()" role="menuitem"><a href="" ng-click="login()">Log in</a></li>
+            <li ng-hide="isLoggedIn()" role="menuitem"><a href="" ng-click="register()">Register</a></li>
+            <li ng-show="isLoggedIn()" role="menuitem"><a href="#">Profile</a></li>
+            <li ng-show="isLoggedIn()" role="menuitem"><a href="#">Settings</a></li>
+            <li ng-show="isLoggedIn()" role="menuitem"><a href="" ng-click="logOut()">Log Out</a></li>
         </ul>
     </div>
-    <div class="clearfix"></div>
+
+    <span class="header-username header-align-right" ng-show="isLoggedIn()">{{currentUser()}}</span>
+    <span class="header-username header-align-right" ng-hide="isLoggedIn()">Guest</span>
+
 </header>
 
 <div id="wrapper">
@@ -37,15 +44,14 @@
         <a href="/"><h1>tech<span class="h1colour">stretcher</span></h1></a>
         <div class="login-control" ng-hide="isLoggedIn()">
             <img class="img_circle" ng-src="/images/generic-prof-pic.png">
-            <a ng-click="login()" style="cursor: pointer;">Log in</a> or <a ng-click="register()"
-                                                                            style="cursor: pointer;">Register</a>
+            <a ng-click="login()" style="cursor: pointer;">Log in</a> or <a ng-click="register()" style="cursor: pointer;">Register</a>
         </div>
 
         <div ng-show="isLoggedIn()">
             <div class="logout-control">
                 <img class="img_circle" ng-src="/images/yusuf.jpg">
                 <p id="username">{{currentUser().toLowerCase()}}</p>
-                <a href="" ng-click="logOut()">Log Out</a>
+                <a href="" ng-click="logOut()">Log out</a>
             </div>
 
             <div class="stats">
