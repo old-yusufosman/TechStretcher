@@ -4,9 +4,9 @@
     <title>TechStretcher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
 
 <div id="wrapper">
     <section class="leftbar">
-        <h1>tech<span class="h1colour">stretcher</span></h1>
+        <a href="/"><h1>tech<span class="h1colour">stretcher</span></h1></a>
         <div class="login-control" ng-hide="isLoggedIn()">
             <img class="img_circle" ng-src="/images/generic-prof-pic.png">
             <a ng-click="login()" style="cursor: pointer;">Log in</a> or <a ng-click="register()" style="cursor: pointer;">Register</a>
@@ -110,7 +110,6 @@
 <script src="/javascripts/controllers/main.js"></script>
 <script src="/javascripts/controllers/posts.js"></script>
 <script src="/javascripts/controllers/authentication.js"></script>
-<script src="/javascripts/controllers/register.js"></script>
 <script src="/javascripts/controllers/navigation.js"></script>
 <script src="/javascripts/services/posts.js"></script>
 <script src="/javascripts/services/authentication.js"></script>
