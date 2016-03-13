@@ -203,18 +203,19 @@ p#username {
     -webkit-border-radius: 28px;
     -moz-border-radius: 28px;
     border-radius: 28px;
-    font-family: Arial;
-    color: #699091;
-    font-size: 14px;
+    color: #2ac2bc;
     background: #ffffff;
     padding: 8px 15px 8px 15px;
     border: solid #2ac2bc 1px;
     text-decoration: none;
     outline:0;
+    cursor: pointer;
+    font:  normal 12px 'Poppins', sans-serif;
 }
 
 .btn:hover {
     border-color: #036965;
+    color: #036965;
     text-decoration: none;
 }
 
@@ -361,7 +362,7 @@ label 				 {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ label, input:valid ~ label		{
     top:-20px;
     font-size:14px;
     color:#2ac2bc;

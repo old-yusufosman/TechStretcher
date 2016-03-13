@@ -13,14 +13,14 @@
         <br>
 
         <div class="group">
-            <input ng-model="user.username" type="text" value="" required>
+            <input ng-model="user.username" type="text" ng-model="text" ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/" required>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>username</label>
+            <label>email address</label>
         </div>
 
         <div class="group">
-            <input ng-model="user.password" type="password" value="" required>
+            <input ng-model="user.password" type="password"  required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>password</label>
