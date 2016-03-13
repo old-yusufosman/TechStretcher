@@ -10,16 +10,29 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins|Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.min.js"></script>
     <script src="/javascripts/angularMain.js"></script>
     <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
-
 <body ng-app="TechStretcher" ng-controller="MainCtrl">
 <header>
-    <h1>tech<span class="h1colour">stretcher</span></h1>
+    <h1 class="align-left">tech<span class="h1colour">stretcher</span></h1>
+    <div class="btn-group align-right" uib-dropdown dropdown-append-to-body>
+
+
+        <div class="burger-button" uib-dropdown-toggle>&#9776;</div>
+        <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-to-body">
+            <li role="menuitem"><a href="#">Action</a></li>
+            <li role="menuitem"><a href="#">Another action</a></li>
+            <li role="menuitem"><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
 </header>
 
 <div id="wrapper">
@@ -27,14 +40,15 @@
         <a href="/"><h1>tech<span class="h1colour">stretcher</span></h1></a>
         <div class="login-control" ng-hide="isLoggedIn()">
             <img class="img_circle" ng-src="/images/generic-prof-pic.png">
-            <a ng-click="login()" style="cursor: pointer;">Log in</a> or <a ng-click="register()" style="cursor: pointer;">Register</a>
+            <a ng-click="login()" style="cursor: pointer;">Log in</a> or <a ng-click="register()"
+                                                                            style="cursor: pointer;">Register</a>
         </div>
 
         <div ng-show="isLoggedIn()">
             <div class="logout-control">
-            <img class="img_circle" ng-src="/images/yusuf.jpg">
-            <p id="username">{{currentUser().toLowerCase()}}</p>
-            <a href="" ng-click="logOut()">Log Out</a>
+                <img class="img_circle" ng-src="/images/yusuf.jpg">
+                <p id="username">{{currentUser().toLowerCase()}}</p>
+                <a href="" ng-click="logOut()">Log Out</a>
             </div>
 
             <div class="stats">
