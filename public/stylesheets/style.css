@@ -45,16 +45,13 @@ header {
 
 .align-left {
     float: left;
+    margin: 5px;
 }
 .align-right {
     float: right;
+    margin: 5px 0 0 0;
 }
 
-.dropdown-menu{
-    position: fixed;
-    top:0;
-    right:0;
-}
 
 svg {
     fill: #2ac2bc;
@@ -464,6 +461,13 @@ and (max-width: 667px)
 
     header {
         display: inherit;
+    }
+
+    .align-left {
+        margin: 0;
+    }
+    .align-right {
+        margin-top: 2px;
     }
 
     #write_post_box{
