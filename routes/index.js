@@ -38,7 +38,6 @@ router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
 });
 
-
 router.get('/posts', function(req, res, next) {
     Post.find(function(err, posts){
         if(err){ return next(err); }
