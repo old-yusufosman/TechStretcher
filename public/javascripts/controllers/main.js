@@ -2,9 +2,10 @@ angular.module('TechStretcher').controller('MainCtrl', [
     '$scope',
     '$uibModal',
     '$log',
+    '$location',
     'posts',
     'auth',
-    function($scope,$uibModal, $log, posts, auth){
+    function($scope,$uibModal, $log, $location, posts, auth){
         $scope.showContents = false;
         $scope.isLoggedIn = auth.isLoggedIn;
         $scope.currentUser = auth.currentUser;
@@ -54,5 +55,8 @@ angular.module('TechStretcher').controller('MainCtrl', [
 
         $scope.incrementUpvotes = function(post) {
             posts.upvote(post);
+        };
+        $scope.go = function ( path ) {
+            $location.path( path );
         };
     }]);

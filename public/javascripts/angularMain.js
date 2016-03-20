@@ -26,7 +26,11 @@ angular.module('TechStretcher', ['ui.router', 'ngAnimate', 'ui.bootstrap'])
                             return posts.get($stateParams.id);
                         }]
                     }
+                })
+                .state('advanced-post', {
+                    url: '/advanced-post',
+                    templateUrl: '/templates/advanced-post/index.html',
+                    controller: 'MainCtrl'
                 });
             $urlRouterProvider.otherwise('home');
-            $locationProvider.html5Mode(true);
         }]);
